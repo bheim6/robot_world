@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class='row text-center'>
+    <h1>All Robots</h1>
+
+    <% @robots.each do |robot| %>
+      <h3><a href="/robots/<%= robot.name %>"><%= robot.name %></a></h3>
+      <a href="/robots/<%= robot.name %>/edit">Edit</a>
+    <% end %>
+    </div>
+  </div>
+</div>

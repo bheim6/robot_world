@@ -1,0 +1,11 @@
+---
+robots:
+- id: 1
+  name: R2D2
+  city: Alderan
+  state: Naboo
+  avatar: '1'
+  birthdate: bday
+  date_hired: after bday
+  department: awesome
+total: 1
