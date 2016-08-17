@@ -28,25 +28,30 @@ class RobotWorld
     raw_bots.map { |data| Robot.new(data) }
   end
 
-  def raw_bot(name)
-    raw_bots.find { |robot| robot["name"] == name }
+  def raw_bot(id)
+    raw_bots.find { |robot| robot["id"] == id }
   end
 
-  def find(name)
-    Robot.new(raw_bot(name))
+  def find(id)
+    Robot.new(raw_bot(id))
   end
 
-  # def update(id, task_data)
-  #   database.transaction do
-  #     task = database["tasks"].find { |data| data["id"] == id }
-  #     task["title"] = task_data[:title]
-  #     task["description"] = task_data[:description]
-  #   end
-  # end
-  #
-  # def destroy(id)
-  #   database.transaction do
-  #     database["tasks"].delete_if { |task| task["id"] == id }
-  #   end
-  # end
+  def update(id, robot_data)
+    database.transaction do
+      robot = database["robots"].find { |data| data["id"] == id }
+      robot["name"] = robot_data[:name]
+      robot["city"] = robot_data[:city]
+      robot["state"] = robot_data[:state]
+      robot["avatar"] = robot_data[:avatar]
+      robot["birthdate"] = robot_data[:birthdate]
+      robot["date_hired"] = robot_data[:date_hired]
+      robot["department"] = robot_data[:department]
+    end
+  end
+
+  def destroy(name)
+    database.transaction do
+      database["robots"].delete_if { |robot| robot["name"] == name }
+    end
+  end
 end

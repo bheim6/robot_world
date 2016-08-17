@@ -22,25 +22,25 @@ class RobotWorldApp < Sinatra::Base
     redirect '/robots'
   end
 
-  get '/robots/:name' do |name|
-    @robot = robot_world.find(name)
+  get '/robots/:id' do |id|
+    @robot = robot_world.find(id.to_i)
     erb :show
   end
 
   get '/robots/:id/edit' do
-    @robot = robot_world.find(params[:name])
+    @robot = robot_world.find(params[:id].to_i)
     erb :edit
   end
 
-  # put '/robots/:name' do
-  #   robot_world.update(params[:name], params[:robot])
-  #   redirect "/robots/#{params[:name]}"
-  # end
-  #
-  # delete '/robots/:name' do
-  #   robot_world.destroy(params[:name])
-  #   redirect '/robots'
-  # end
+  put '/robots/:id' do
+    robot_world.update(params[:id].to_i, params[:robot])
+    redirect "/robots/#{params[:id]}"
+  end
+
+  delete '/robots/:id' do
+    robot_world.destroy(params[:id].to_i)
+    redirect '/robots'
+  end
 
   def robot_world
     database = YAML::Store.new('db/robot_world')

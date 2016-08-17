@@ -16,6 +16,10 @@
         <p>Manufacture Date: <%= @robot.birthdate %></p>
         <p>Date Hired: <%= @robot.date_hired %></p>
         <p>Department: <%= @robot.department %></p>
+        <form action="/robots/<%= @robot.id %>" method="post">
+          <input type="hidden" name="_method" value="delete" />
+          <input type="submit" value="Delete Robot" />
+        </form>
       </div>
     </div>
     </div>
