@@ -27,19 +27,19 @@ class RobotWorldApp < Sinatra::Base
     erb :show
   end
 
-  # get '/tasks/:id/edit' do
-  #   @task = task_manager.find(params[:id].to_i)
-  #   erb :edit
+  get '/robots/:id/edit' do
+    @robot = robot_world.find(params[:name])
+    erb :edit
+  end
+
+  # put '/robots/:name' do
+  #   robot_world.update(params[:name], params[:robot])
+  #   redirect "/robots/#{params[:name]}"
   # end
   #
-  # put '/tasks/:id' do
-  #   task_manager.update(params[:id].to_i, params[:task])
-  #   redirect "/tasks/#{params[:id]}"
-  # end
-  #
-  # delete '/tasks/:id' do
-  #   task_manager.destroy(params[:id].to_i)
-  #   redirect '/tasks'
+  # delete '/robots/:name' do
+  #   robot_world.destroy(params[:name])
+  #   redirect '/robots'
   # end
 
   def robot_world

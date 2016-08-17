@@ -8,4 +8,20 @@ robots:
   birthdate: bday
   date_hired: after bday
   department: awesome
-total: 1
+- id: 2
+  name: Mechazoid
+  city: Nobody knows
+  state: See City of Origin
+  avatar: 12oihfaefh
+  birthdate: Whenever he says it is
+  date_hired: 8/25/1975
+  department: Kickin ass and takin' names
+- id: 3
+  name: Beezbul
+  city: Shack
+  state: Papua New Guinea
+  avatar: kdjx,hra98srfghciut
+  birthdate: 10/01/1692
+  date_hired: 8/11/2016
+  department: Firebreather
+total: 3

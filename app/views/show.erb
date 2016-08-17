@@ -1,13 +1,22 @@
 <div class="jumbotron">
   <div class="container">
-    <a href="/robots">Robodex</a>
-    <h1><%= @robot.name %></h1>
-
-    <p><%= @robot.avatar %></p>
-    <p><%= @robot.city %></p>
-    <p><%= @robot.state %></p>
-    <p><%= @robot.birthdate %></p>
-    <p><%= @robot.date_hired %></p>
-    <p><%= @robot.department %></p>
+    <div class='row text-center'>
+      <a href="/robots">Robodex</a>
+      <h1><%= @robot.name %></h1>
+    </div>
   </div>
+    <div class='container'>
+      <div class='col-md-6'>
+        <img src="https://robohash.org/<%= @robot.avatar %>" alt='avatar' class="center-block">
+      </div>
+      <div class='row text-center'>
+      <div class='col-md-6'>
+        <p>City of Origin: <%= @robot.city %></p>
+        <p>State of Origin: <%= @robot.state %></p>
+        <p>Manufacture Date: <%= @robot.birthdate %></p>
+        <p>Date Hired: <%= @robot.date_hired %></p>
+        <p>Department: <%= @robot.department %></p>
+      </div>
+    </div>
+    </div>
 </div>
