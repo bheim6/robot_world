@@ -23,4 +23,5 @@ class CreateNewRobotTest < FeatureTest
     assert page.has_content?('Leeroy')
   end
 
+
 end
