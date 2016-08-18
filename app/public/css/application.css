@@ -1,7 +1,19 @@
 .navbar-default {
-  background-color: #B0C4DE
+  background-image: url("https://images.sciencedaily.com/2013/12/131205141427_1_540x360.jpg")
+}
+
+.navbar-brand {
+  background-color: #F8F8FF
+}
+
+.navbar-right a {
+  background-color: #F8F8FF
 }
 
 .btn-primary {
   background-color: #66CDAA
+}
+
+body {
+  background-image: url("http://www.eplate.com/EPC%20Capabilities%202015a_files/image286.jpg");
 }

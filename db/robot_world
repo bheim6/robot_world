@@ -5,7 +5,7 @@ robots:
   city: Alderan
   state: Naboo
   avatar: r2d2
-  birthdate: 3/21/1999
+  birthdate: 3/22/1998
   date_hired: 6/17/2016
   department: awesome
 - id: 2
@@ -48,4 +48,4 @@ robots:
   birthdate: 5/16/1987
   date_hired: 7/11/2016
   department: Translation
-total: 7
+total: 8

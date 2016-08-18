@@ -1,4 +1,4 @@
-require 'models/robot_world'
+require 'yaml/store'
 
 class RobotWorldApp < Sinatra::Base
   set :root, File.expand_path("..",  __dir__)
@@ -43,7 +43,11 @@ class RobotWorldApp < Sinatra::Base
   end
 
   def robot_world
-    database = YAML::Store.new('db/robot_world')
+    if ENV['RACK_ENV'] == "test"
+      database = YAML::Store.new("db/robot_world_test")
+    else
+      database = YAML::Store.new('db/robot_world')
+    end
     @robot_world ||= RobotWorld.new(database)
   end
 end
