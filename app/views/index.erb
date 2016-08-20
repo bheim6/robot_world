@@ -4,8 +4,10 @@
     <h1>All Robots</h1>
 
     <% @robots.each do |robot| %>
-    <img src="https://robohash.org/<%= robot.avatar %>" alt='avatar' class="center-block image-rounded">
+    <div class="col-md-6">
+      <img src="https://robohash.org/<%= robot.avatar %>" alt='avatar' class="center-block image-rounded">
       <h3><%= robot.id %>: <a class="btn btn-primary" href="/robots/<%= robot.id %>"><%= robot.name %></a></h3>
+    </div>
     <% end %>
     </div>
   </div>

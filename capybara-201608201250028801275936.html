@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='/css/bootstrap.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/css/application.css">
+  <title>Skynet</title>
+</head>
+<body>
+  <div class='container'>
+  <div class='col-md-12 navbar navbar-inverse navbar-static-top'>
+    <a href='/' class='navbar-brand'>Robot World</a>
+      <ul class='nav navbar-nav navbar-right'>
+      <li><a href="/robots">Robodex</a></li>
+      <li><a href="/robots/new">New Robot</a></li>
+      </ul>
+  </div>
+  </div>
+  <div class="container">
+    <div class="jumbotron">
+  <div class="container">
+    <div class='row text-center'>
+      <a class="btn btn-info" href="/robots">Back to Robodex</a>
+      <h1>Leeroy</h1>
+    </div>
+  </div>
+    <div class='container'>
+      <div class='col-md-6'>
+        <img class="image-rounded" src="https://robohash.org/mrjenkins" alt='avatar' class="center-block">
+      </div>
+      <div class='row text-center'>
+      <div class='col-md-6'>
+        <p>City of Origin: Stormforge</p>
+        <p>State of Origin: Iron Hills</p>
+        <p>Manufacture Date: 6/6/1999</p>
+        <p>Date Hired: 9/9/2001</p>
+        <p>Department: Raids</p>
+        <p>
+          <a class="btn btn-primary" href="/robots/39/edit">Edit Robot</a>
+        </p>
+
+        <form action="/robots/39" method="post">
+          <input type="hidden" name="_method" value="delete" />
+          <input class="btn btn-danger" type="submit" value="Delete Robot" />
+        </form>
+      </div>
+    </div>
+    </div>
+</div>
+
+  </div>
+</body>
+</html>
