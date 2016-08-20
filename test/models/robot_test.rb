@@ -7,15 +7,16 @@ class RobotTest < Minitest::Test
                         "city" => "Denver",
                         "state" => "Colorado",
                         "avatar" => "bob",
-                        "birthdate" => "12/18/1989",
+                        "birthdate" => "1989-12-18",
                         "date_hired" => "3/15/2016",
                         "department" => "awesome"
                         })
     assert_equal("Bob", robot.name)
     assert_equal("Denver", robot.city)
-    assert_equal("12/18/1989", robot.birthdate)
+    assert_equal("1989-12-18", robot.birthdate)
     assert_equal("3/15/2016", robot.date_hired)
     assert_equal("Colorado", robot.state)
     assert_equal(1, robot.id)
+    assert_equal(27, robot.age)
   end
 end

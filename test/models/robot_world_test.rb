@@ -13,7 +13,7 @@ class RobotWorldTest < Minitest::Test
       :city => "Trenton",
       :state => "New Jersey",
       :avatar => "cyborg1",
-      :birthdate => "5/12/1990",
+      :birthdate => "1990-5-12",
       :date_hired => "11/7/2016",
       :department => "Law Enforcement"
       })
@@ -63,5 +63,35 @@ class RobotWorldTest < Minitest::Test
 
     robot = robot_world.find(current_robot_id)
     assert_equal("Jesus", robot.name)
+  end
+
+  def test_it_finds_sum_of_robot_ages
+    create_robot
+    robot_world.create({
+      :name => "Cyborg",
+      :city => "Trenton",
+      :state => "New Jersey",
+      :avatar => "cyborg1",
+      :birthdate => "1992-5-12",
+      :date_hired => "11/7/2016",
+      :department => "Law Enforcement"
+      })
+
+    assert_equal(50, robot_world.sum_of_robot_ages)
+  end
+
+  def test_it_finds_average_robot_age
+    create_robot
+    robot_world.create({
+      :name => "Cyborg",
+      :city => "Trenton",
+      :state => "New Jersey",
+      :avatar => "cyborg1",
+      :birthdate => "1992-5-12",
+      :date_hired => "11/7/2016",
+      :department => "Law Enforcement"
+      })
+
+    assert_equal(25, robot_world.average_age)
   end
 end

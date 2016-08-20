@@ -23,6 +23,17 @@ class RobotWorld
     raw_bots.map { |data| Robot.new(data) }
   end
 
+  def sum_of_robot_ages
+    all.reduce(0) do |total, (robot)|
+      total += robot.age
+      total
+    end
+  end
+
+  def average_age
+    (sum_of_robot_ages) / (all.count)
+  end
+
   def raw_bot(id)
     database.execute("SELECT * FROM robots WHERE id = ?;", id).first
   end

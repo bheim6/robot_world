@@ -1,4 +1,4 @@
-<header>  
+<header>
   <div class="jumbotron">
     <div class='container'>
       <div class='row text-center'>
@@ -6,6 +6,22 @@
         <h2>Robot Superstore and Emporium</h2>
         <h3>Browse our Robodex for capable Bots and Droids!</h3>
       </div>
+    </div>
+  </div>
+  <div class="jumbotron">
+    <div class='container'>
+      <h2 class="text-center" >About our Inventory:</h2>
+      <table class="table table-striped">
+        <tr>
+          <th>Total Number of Robots</th>
+          <th>Average Robot Age</th>
+        </tr>
+        <tr>
+          <td><%= robot_world.all.count %></td>
+          <td><%= robot_world.average_age %></td>
+        </tr>
+
+      </table>
     </div>
   </div>
 </header>

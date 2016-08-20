@@ -8,6 +8,7 @@ class Robot
               :date_hired,
               :department
 
+
   def initialize(data)
     @id = data["id"]
     @name = data["name"]
@@ -17,5 +18,10 @@ class Robot
     @birthdate = data["birthdate"]
     @date_hired = data["date_hired"]
     @department = data["department"]
+    # @age = Time.now.year - (Time.parse(data["birthdate"]).year)
+  end
+
+  def age
+    Time.now.year - (Time.parse(birthdate).year)
   end
 end
