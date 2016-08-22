@@ -31,7 +31,11 @@ class RobotWorld
   end
 
   def average_age
-    (sum_of_robot_ages) / (all.count)
+    if all.count == 0
+      0
+    else
+      (sum_of_robot_ages) / (all.count)
+    end
   end
 
   def raw_bot(id)

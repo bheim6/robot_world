@@ -14,7 +14,7 @@ class RobotWorldTest < Minitest::Test
       :state => "New Jersey",
       :avatar => "cyborg1",
       :birthdate => "1990-5-12",
-      :date_hired => "11/7/2016",
+      :date_hired => "2016-11-7",
       :department => "Law Enforcement"
       })
   end
@@ -73,7 +73,7 @@ class RobotWorldTest < Minitest::Test
       :state => "New Jersey",
       :avatar => "cyborg1",
       :birthdate => "1992-5-12",
-      :date_hired => "11/7/2016",
+      :date_hired => "2016-11-7",
       :department => "Law Enforcement"
       })
 
@@ -88,7 +88,7 @@ class RobotWorldTest < Minitest::Test
       :state => "New Jersey",
       :avatar => "cyborg1",
       :birthdate => "1992-5-12",
-      :date_hired => "11/7/2016",
+      :date_hired => "2016-11-7",
       :department => "Law Enforcement"
       })
 

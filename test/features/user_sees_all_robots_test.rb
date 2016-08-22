@@ -7,8 +7,8 @@ class UserSeesAllRobotsTest < FeatureTest
       :city => "Trenton",
       :state => "New Jersey",
       :avatar => "cyborg1",
-      :birthdate => "5/12/1990",
-      :date_hired => "11/7/2016",
+      :birthdate => "1990-5-12",
+      :date_hired => "2016-7-11",
       :department => "Law Enforcement"
       })
     robot_world.create({
@@ -16,8 +16,8 @@ class UserSeesAllRobotsTest < FeatureTest
       :city => "Long Beach",
       :state => "California",
       :avatar => "steveo",
-      :birthdate => "11/12/1980",
-      :date_hired => "7/9/2016",
+      :birthdate => "1980-11-12",
+      :date_hired => "2016-7-9",
       :department => "Surfing"
       })
 

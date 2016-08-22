@@ -10,8 +10,8 @@ class UserCanDeleteRobotTest < FeatureTest
   fill_in('city', :with => 'Stormforge')
   fill_in('state', :with => 'Iron Hills')
   fill_in('avatar', :with => 'mrjenkins')
-  fill_in('birthdate', :with => '6/6/1999')
-  fill_in('date_hired', :with => '9/9/2001')
+  fill_in('birthdate', :with => '1999-6-6')
+  fill_in('date_hired', :with => '2001-9-9')
   fill_in('department', :with => 'Raids')
   click_on('Submit')
 
@@ -21,8 +21,8 @@ class UserCanDeleteRobotTest < FeatureTest
   fill_in('city', :with => 'Stormforge')
   fill_in('state', :with => 'Iron Hills')
   fill_in('avatar', :with => 'steve')
-  fill_in('birthdate', :with => '6/6/1999')
-  fill_in('date_hired', :with => '9/9/2001')
+  fill_in('birthdate', :with => '1999-6-6')
+  fill_in('date_hired', :with => '2001-9-9')
   fill_in('department', :with => 'Raids')
   click_on('Submit')
 
